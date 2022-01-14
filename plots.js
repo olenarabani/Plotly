@@ -38,7 +38,7 @@ function init() {
       var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
       var result = resultArray[0];
       // Use d3 to select the panel with id of `#sample-metadata`
-      var PANEL = d3.select("#sample-metadata");
+      var PANEL = d3.select("#samples-metadata");
   
       // Use `.html("") to clear any existing metadata
       PANEL.html("");
@@ -56,7 +56,7 @@ function init() {
   // 1. Create the buildCharts function.
   function buildCharts(sample) {
     // 2. Use d3.json to load and retrieve the samples.json file 
-    d3.json("saples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
       // 3. Create a variable that holds the samples array. 
       var samples = data.samples;
       // 4. Create a variable that filters the samples for the object with the desired sample number.
